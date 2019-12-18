@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layoutRelative"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@color/colorPrimary">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Users"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addBtn"
+            android:layout_below="@id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:onClick="intentToAddUser"
+            android:background="@drawable/ic_add_24dp"
+            android:text="+ ADD" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginStart="16dp"
+            android:text="Users"
+            android:textColor="@color/colorBlack"
+            android:textSize="35sp"
+            />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorBlack" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/textItems"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorBlack" />
+        <view class="androidx.appcompat.app.AlertController$RecycleListView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/line2"
+            android:layout_marginTop="20dp"
+            app:toolbarId="@layout/row_barang"
+            android:layout_height="wrap_content">
+
+        </view>
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_below="@id/line2"-->
+        <!--            tools:listitem="@layout/row_barang"-->
+        <!--            android:layout_height="wrap_content"/>-->
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listViewUser"
+        app:layout_constraintTop_toBottomOf="@id/layoutRelative"
+        android:layout_marginTop="150dp"
+        tools:listitem="@layout/row_user"
+        android:layout_height="match_parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

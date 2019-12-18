@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransaksiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/actionBar"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Record"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+        </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:id="@+id/imageView"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="160dp"
+            android:layout_below="@id/actionBar"
+            android:layout_height="160dp"
+            android:src="@drawable/addphoto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_below="@id/imageView"
+            android:id="@+id/tagsLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:inputType="text"
+                android:hint="Tags"
+                android:ems="10"
+                android:id="@+id/tagsField" />
+
+            <TextView
+                android:text="Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearIdBtn"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tagsLayout"
+            android:id="@+id/notesLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:inputType="text"
+                android:hint="Notes"
+                android:ems="10"
+                android:id="@+id/notesField" />
+
+            <TextView
+                android:text="Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearIdBtn1"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/qtyLayout"
+            android:id="@+id/safetyStockLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:inputType="number"
+                android:hint="Safety Stock"
+                android:ems="10"
+                android:id="@+id/safetyStockField" />
+
+            <TextView
+                android:text="Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearIdBtn2"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/qtyLayout"
+            android:layout_toEndOf="@id/safetyStockLayout"
+            android:id="@+id/optimumStockLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:inputType="number"
+                android:hint="Optimum Stock"
+                android:ems="10"
+                android:id="@+id/optimumStockField" />
+
+            <TextView
+                android:text="Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearIdBtn3"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/notesLayout"
+            android:id="@+id/qtyLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:hint="QTY"
+                android:ems="10"
+                android:id="@+id/qtyField" />
+
+            <TextView
+                android:text="Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearIdBtn4"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/optimumStockLayout"
+            android:id="@+id/priceLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:inputType="number"
+                android:hint="Price"
+                android:ems="10"
+                android:id="@+id/priceField" />
+
+            <TextView
+                android:text="Clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearIdBtn6"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_below="@id/priceLayout"
+            android:layout_centerHorizontal="true"
+            android:minWidth="160dp"
+            android:text="Save Record"
+            android:layout_marginTop="40dp"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_below="@id/priceLayout"
+            android:layout_centerHorizontal="true"
+            android:minWidth="160dp"
+            android:text="Update Record"
+            android:visibility="gone"
+            android:layout_marginTop="40dp"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

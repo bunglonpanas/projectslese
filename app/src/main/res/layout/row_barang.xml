@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="100dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="68dp"
+            android:id="@+id/imgCam"
+            android:layout_margin="14dp"
+            android:src="@drawable/addphoto"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="68dp"/>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:layout_marginStart="20dp"
+            android:id="@+id/line1"
+            app:layout_constraintStart_toEndOf="@+id/imgCam"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:id="@+id/line2"
+            android:layout_height="2dp"
+            android:background="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tagsText"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:text="Tags : "
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toEndOf="@id/line1"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tagsVal"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:text="TagsDesc"
+            app:layout_constraintStart_toEndOf="@id/tagsText"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tagsText"
+            android:layout_marginStart="10dp"
+            android:id="@+id/notesText"
+            android:layout_marginTop="5dp"
+            android:text="Notes : "
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toEndOf="@id/line1"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tagsText"
+            android:layout_marginStart="10dp"
+            android:id="@+id/notesVal"
+            android:layout_marginTop="5dp"
+            android:text="NotesDesc "
+            app:layout_constraintStart_toEndOf="@id/notesText"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/notesText"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="QTY : "
+            android:id="@+id/qtyText"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toEndOf="@id/line1"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/notesText"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="QTYDesc"
+            android:id="@+id/qtyVal"
+            app:layout_constraintStart_toEndOf="@id/qtyText"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/qtyText"
+            android:layout_marginStart="10dp"
+            android:id="@+id/priceText"
+            android:text="Price : "
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toEndOf="@id/line1"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/qtyText"
+            android:layout_marginStart="10dp"
+            android:id="@+id/priceVal"
+            android:text="PriceDesc"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@id/priceText"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
